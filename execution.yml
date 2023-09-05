@@ -1,0 +1,15 @@
+---
+execution:
+  concurrency: 10  # Number of concurrent users
+  hold-for: 1m    # How long the test should run
+
+scenarios:
+  my_scenario:
+    script: path/to/your/test_script.jmx
+    modules:
+      - modules/http.py
+
+reporting:
+  - final-stats
+  - console
+  - junit-xml
